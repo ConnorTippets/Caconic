@@ -1,0 +1,6 @@
+#hi
+import os
+func name arg: #hi
+	something
+str yourmom "value"
+print(yourmom, os.listdir())
