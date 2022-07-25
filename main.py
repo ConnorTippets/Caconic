@@ -14,11 +14,13 @@ def main(path):
     script = open(path).read()
     parser = Parser(script)
     try:
-        if argv[2] == "--transpile":
-            return '\n'.join([a for a in parser.out if a])
-        else:
-            Interpreter('\n'.join([a for a in parser.out if a]))
+        argv[2]
     except:
+        Interpreter('\n'.join([a for a in parser.out if a]))
+        return
+    if argv[2] == "--transpile":
+        return '\n'.join([a for a in parser.out if a])
+    else:
         Interpreter('\n'.join([a for a in parser.out if a]))
 out = main(scriptpath)
 if out:

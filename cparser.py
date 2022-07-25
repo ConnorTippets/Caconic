@@ -41,6 +41,8 @@ class Parser:
             return _
         for object in objects:
             if parsing[0] == object:
-                _ = f"{parsing[1]} = {parsing[2]}"
-                return _
+                _ = f"{parsing[1]} = "
+                for split in parsing[2:]:
+                    _+=(split+" ")
+                return _[:-1]
         return line

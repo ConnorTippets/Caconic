@@ -2,5 +2,5 @@
 import os
 func name arg: #hi
 	something
-str yourmom "value"
+str yourmom "value there lol lmfao"
 print(yourmom, os.listdir())
